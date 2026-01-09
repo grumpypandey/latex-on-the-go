@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LatexLite</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/latex.js/dist/latex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Latex-on-the-go</div>
+  <div class="controls">
+    <button id="new">New</button>
+    <button id="save">Save .tex</button>
+    <button id="pdf">Export PDF</button>
+    <button id="theme">Theme</button>
+  </div>
+</header>
+
+<main>
+  <section class="editor-pane">
+    <textarea id="editor"></textarea>
+  </section>
+
+  <section class="preview-pane">
+    <iframe id="preview"></iframe>
+  </section>
+</main>
+
+<footer>
+  <span id="status">Ready</span>
+</footer>
+
+<script src="logic.js"></script>
+</body>
+</html>
