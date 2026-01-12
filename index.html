@@ -1,40 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>LatexLite</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/latex.js/dist/latex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <meta charset="utf-8">
+    <title>LatexLite</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/latex.js/dist/latex.min.js"></script>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">Latex-on-the-go</div>
-  <div class="controls">
-    <button id="new">New</button>
-    <button id="save">Save .tex</button>
-    <button id="pdf">Export PDF</button>
-    <button id="theme">Theme</button>
-  </div>
-</header>
+    <header>
+        <div class="brand">
+            LatexLite
+        </div>
 
-<main>
-  <section class="editor-pane">
-    <textarea id="editor"></textarea>
-  </section>
+        <div class="toolbar">
+            <input type="file" id="fileInput" accept=".tex" style="display:none">
+            <button id="loadBtn">Load File</button>
+            <button id="saveBtn">Save</button>
+            <button id="themeBtn">Theme</button>
+        </div>
+    </header>
 
-  <section class="preview-pane">
-    <iframe id="preview"></iframe>
-  </section>
-</main>
 
-<footer>
-  <span id="status">Ready</span>
-</footer>
+    <div class="container">
+
+        <div class="editorBox">
+            <textarea id="editor"></textarea>
+        </div>
+
+        <div id="divider"></div>
+
+        <div class="previewBox">
+            <iframe id="preview"></iframe>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <span id="status">idle</span>
+    </footer>
+
 
 <script src="logic.js"></script>
 </body>
 </html>
+
+
+
+
+
