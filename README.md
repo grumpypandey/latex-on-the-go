@@ -1,27 +1,23 @@
-latex-on-the-go
+# latex-on-the-go
 
-latex-on-the-go is a fully client-side LaTeX editor built for quick editing and previewing of .tex files directly in the browser.
-The aim of the project is to make LaTeX usable anywhere, instantly, without installing a TeX distribution or relying on a backend server.
+latex-on-the-go is a fully client-side LaTeX editor designed for quick editing and previewing of .tex files directly in the browser.
+It focuses on portability, simplicity, and zero setup — making LaTeX usable anywhere without installing a TeX distribution or relying on a backend.
 
-Everything runs purely in the browser using HTML, CSS, and JavaScript.
+Everything runs entirely in the browser using plain HTML, CSS, and JavaScript.
 
-Why I built this
+# Motivation
 
-I often needed to make small LaTeX edits or quickly preview equations while away from my main setup. Installing LaTeX everywhere or depending on full online editors felt unnecessary for simple tasks.
+The idea for this project came from the need to:
 
-This project started as a basic editor + preview page and slowly evolved into a small IDE-like tool as more features were added incrementally.
+quickly edit LaTeX files on shared or temporary systems
 
-The main focus was:
+preview equations without setting up a full LaTeX environment
 
-zero installation
+experiment with editor-like features using only frontend technologies
 
-client-side only
+The project started very small and was gradually expanded in phases to resemble a lightweight LaTeX IDE.
 
-fast iteration
-
-learning how real editors manage files and state
-
-Features
+# Features
 
 Live LaTeX preview in the browser
 
@@ -29,7 +25,7 @@ Multi-file project support
 
 File switching with active file indicator
 
-Autosave using browser local storage
+Autosave using browser localStorage
 
 Load .tex files from the local system
 
@@ -37,21 +33,23 @@ Save individual .tex files
 
 Error output panel for render failures
 
-Light and Dark theme support
+Light and Dark themes
 
 Resizable editor and preview panes
 
-Scroll sync between editor and preview
+Scroll synchronization between editor and preview
 
-Keyboard shortcuts
+# Keyboard shortcuts
 
-Ctrl + S to save
+Ctrl + S — Save current file
 
-Ctrl + O to open a file
+Ctrl + O — Open file
 
-No backend, no frameworks, no build tools.
+No backend.
+No frameworks.
+No build tools.
 
-Tech Stack
+# Tech Stack
 
 HTML
 
@@ -59,45 +57,45 @@ CSS
 
 Vanilla JavaScript
 
-latex.js for LaTeX parsing and rendering
+latex.js (for LaTeX parsing and rendering)
 
-All libraries are loaded using CDNs.
+All dependencies are loaded via CDN.
 
-How it works (high level)
+# How It Works (High Level)
 
-The editor treats a project as a simple JavaScript object
+A project is stored as a simple JavaScript object
 
-Files are stored as filename–content pairs
+Files are stored as filename → content pairs
 
 The active file is parsed and rendered using latex.js
 
-Rendering is debounced to avoid unnecessary re-parsing
+Rendering is debounced to reduce unnecessary parsing
 
-Errors during parsing are caught and displayed in a panel
+Parsing errors are caught and displayed in an error panel
 
-The entire project state is stored in localStorage
+Project state is persisted using localStorage
 
 Pane resizing is handled manually using mouse events
 
-There is no server-side processing involved.
+No server-side processing is involved at any point.
 
-Limitations
+ # Limitations
 
 This does not fully compile LaTeX like pdflatex
 
-Some LaTeX packages are not supported by latex.js
+Some LaTeX packages are unsupported by latex.js
 
-Error messages can be generic
+Error messages can be vague
 
-Performance may degrade for very large documents
+Large documents may impact performance
 
 Preview output is not identical to a real PDF
 
-This tool is intended for quick edits, previews, and learning, not final publication workflows.
+This tool is intended for quick edits and previews, not full publication workflows.
 
-Development notes
+# Development Notes
 
-The project was developed in phases:
+The project was developed incrementally in phases:
 
 Basic editor and preview layout
 
@@ -105,23 +103,13 @@ File loading, theming, autosave
 
 Multi-file support, error handling, keyboard shortcuts, UI improvements
 
-A lot of the logic was built experimentally and refined over time.
-Some parts are intentionally straightforward rather than heavily abstracted.
+Much of the code was written experimentally and refined over time.
+Some parts are intentionally simple rather than heavily abstracted to keep the logic understandable.
 
-Running the project
+# Running the Project
 
-Simply open index.html in a modern browser.
+Download or clone the repository
+
+Open index.html in any modern browser
 
 No installation or setup required.
-
-Possible future improvements
-
-Line numbers
-
-Better error highlighting
-
-PDF export using WebAssembly-based TeX
-
-Folder-based project structure
-
-Mobile-friendly layout improvements
