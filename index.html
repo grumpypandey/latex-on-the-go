@@ -11,45 +11,44 @@
 
 <body>
 
-    <header>
-        <div class="brand">
-            LatexLite
-        </div>
+<header>
+    <div class="brand">LatexLite</div>
 
-        <div class="toolbar">
-            <input type="file" id="fileInput" accept=".tex" style="display:none">
-            <button id="loadBtn">Load File</button>
-            <button id="saveBtn">Save</button>
-            <button id="themeBtn">Theme</button>
-        </div>
-    </header>
+    <div class="toolbar">
+        <input type="file" id="fileInput" accept=".tex" style="display:none">
+        <button id="newFileBtn">New</button>
+        <button id="loadBtn">Open</button>
+        <button id="saveBtn">Save</button>
+        <button id="themeBtn">Theme</button>
+    </div>
+</header>
 
+<div class="workspace">
 
-    <div class="container">
+    <aside class="sidebar">
+        <div class="filesTitle">Files</div>
+        <ul id="fileList"></ul>
+    </aside>
 
-        <div class="editorBox">
-            <textarea id="editor"></textarea>
-        </div>
-
-        <div id="divider"></div>
-
-        <div class="previewBox">
-            <iframe id="preview"></iframe>
-        </div>
-
+    <div class="editorWrap">
+        <textarea id="editor"></textarea>
     </div>
 
+    <div id="divider"></div>
 
-    <footer>
-        <span id="status">idle</span>
-    </footer>
+    <div class="previewWrap">
+        <iframe id="preview"></iframe>
+        <div class="errorPanel" id="errorPanel"></div>
+    </div>
 
+</div>
+
+<footer>
+    <span id="status">idle</span>
+</footer>
 
 <script src="logic.js"></script>
 </body>
 </html>
-
-
-
 
 
