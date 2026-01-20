@@ -1,7 +1,7 @@
 # latex-on-the-go
 
 latex-on-the-go is a fully client-side LaTeX editor designed for quick editing and previewing of .tex files directly in the browser.
-It focuses on portability, simplicity, and zero setup — making LaTeX usable anywhere without installing a TeX distribution or relying on a backend.
+It focuses on portability, simplicity, and zero setup , making LaTeX usable anywhere without installing a TeX distribution or relying on a backend.
 
 Everything runs entirely in the browser using plain HTML, CSS, and JavaScript.
 
@@ -61,7 +61,7 @@ latex.js (for LaTeX parsing and rendering)
 
 All dependencies are loaded via CDN.
 
-# How It Works (High Level)
+# How It Works 
 
 A project is stored as a simple JavaScript object
 
